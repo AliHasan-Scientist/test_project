@@ -46,6 +46,8 @@ public class ResultServiceImpl implements ResultService {
 
     @Override
     public ResultDto updateResult(Long resultId) {
+
+
         return null;
     }
 
