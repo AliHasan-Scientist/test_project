@@ -1,10 +1,10 @@
 package com.test_project.controllers;
 
+import com.test_project.dto.ResultCardDto;
 import com.test_project.entities.ResultCard;
 import com.test_project.services.ResultCardService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,10 +19,11 @@ public class ResultCardController {
     private ResultCardService resultCardService;
 
     @PostMapping("/student/{studentId}/result/{resultId}/resultCard")
-    public ResponseEntity<ResultCard> addResult(@RequestBody ResultCard resultCard, @PathVariable(value = "studentId") Long studentId, @PathVariable(value = "resultId") Long resultId) {
-        ResultCard addedResultCard = resultCardService.createAResultCard(studentId, resultId, resultCard);
-        return new ResponseEntity<>(addedResultCard, HttpStatus.CREATED);
+    public ResponseEntity<ResultCardDto> addResult(@RequestBody ResultCardDto resultCardDto, @PathVariable(value = "studentId") Long studentId, @PathVariable(value = "resultId") Long resultId) {
+        ResultCardDto addResult = resultCardService.createAResultCard(studentId, resultId, resultCardDto);
+        return new ResponseEntity<>(addResult, HttpStatus.CREATED);
     }
+
 
     @GetMapping("/getResultCard")
     public ResponseEntity<List<ResultCard>> getAllResultCards() {

@@ -26,13 +26,15 @@ public class ResultCardServiceImpl implements ResultCardService {
     @Autowired
     private ResultCardRepository resultCardRepository;
 
-    public ResultCard createAResultCard(Long studentId, Long resultId, ResultCard resultCard) {
+    public ResultCardDto createAResultCard(Long studentId, Long resultId, ResultCardDto resultCardDto) {
         Student student = studentRepository.findById(studentId).orElseThrow(null);
         Result result = resultRepository.findById(resultId).orElseThrow(null);
+        ResultCard resultCard = this.dtoToResultCard(resultCardDto);
+        resultCard.setResult(result);
+        resultCard.setStudent(student);
         resultCard.setAnnouncedDate(new Date());
-//        resultCard.setResult(result);
-//        resultCard.setStudent(student);
-        return resultCardRepository.save(resultCard);
+        ResultCard addedResultCard = this.resultCardRepository.save(resultCard);
+        return this.resultCardToDto(addedResultCard);
     }
 
     @Override
