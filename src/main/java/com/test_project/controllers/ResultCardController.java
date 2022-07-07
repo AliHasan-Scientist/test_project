@@ -19,9 +19,9 @@ public class ResultCardController {
     private ResultCardService resultCardService;
 
     @PostMapping("/student/{studentId}/result/{resultId}/resultCard")
-    public ResponseEntity<ResultCard> addResult(@PathVariable(value = "studentId") Long studentId, @PathVariable(value = "resultId") Long resultId, @RequestBody ResultCard resultCard) {
-        ResultCard resultCard1 = resultCardService.createAResultCard(studentId, resultId, resultCard);
-        return new ResponseEntity<>(resultCard1, HttpStatus.CREATED);
+    public ResponseEntity<ResultCard> addResult(@RequestBody ResultCard resultCard, @PathVariable(value = "studentId") Long studentId, @PathVariable(value = "resultId") Long resultId) {
+        ResultCard addedResultCard = resultCardService.createAResultCard(studentId, resultId, resultCard);
+        return new ResponseEntity<>(addedResultCard, HttpStatus.CREATED);
     }
 
     @GetMapping("/getResultCard")
