@@ -1,6 +1,6 @@
-package com.test_project.Controllers;
-import com.test_project.Entities.ResultCard;
-import com.test_project.Services.ResultCardService;
+package com.test_project.controllers;
+import com.test_project.entities.ResultCard;
+import com.test_project.services.ResultCardService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;

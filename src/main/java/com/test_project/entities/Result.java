@@ -1,4 +1,4 @@
-package com.test_project.Entities;
+package com.test_project.entities;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Getter;
@@ -15,7 +15,7 @@ public class Result {
     @Id
     @SequenceGenerator(name = "result_sequence", sequenceName = "result_sequence", allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "result_sequence")
-    @Column(name = "result_ID", nullable = false, unique = true)
+    @Column(name = "result_ID", nullable = false, unique = true )
     //primary key of stud_result
     private Long resultId;
     @Column(name = "stud_RN", nullable = false, unique = true)

@@ -1,11 +1,11 @@
-package com.test_project.Services.Impl;
+package com.test_project.services.Impl;
 
-import com.test_project.Dto.ResultDto;
-import com.test_project.Entities.Result;
-import com.test_project.Entities.Student;
-import com.test_project.Repository.ResultRepository;
-import com.test_project.Repository.StudentRepository;
-import com.test_project.Services.ResultService;
+import com.test_project.dto.ResultDto;
+import com.test_project.entities.Result;
+import com.test_project.entities.Student;
+import com.test_project.repository.ResultRepository;
+import com.test_project.repository.StudentRepository;
+import com.test_project.services.ResultService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

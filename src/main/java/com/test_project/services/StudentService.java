@@ -1,8 +1,8 @@
-package com.test_project.Services;
+package com.test_project.services;
 
 
-import com.test_project.Dto.StudentDto;
-import com.test_project.Entities.Student;
+import com.test_project.dto.StudentDto;
+import com.test_project.entities.Student;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

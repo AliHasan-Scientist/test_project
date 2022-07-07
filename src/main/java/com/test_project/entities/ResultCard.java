@@ -1,4 +1,4 @@
-package com.test_project.Entities;
+package com.test_project.entities;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.Getter;

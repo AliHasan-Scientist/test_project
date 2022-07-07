@@ -1,8 +1,8 @@
-package com.test_project.Controllers;
+package com.test_project.controllers;
 
-import com.test_project.Dto.StudentDto;
-import com.test_project.Entities.Student;
-import com.test_project.Services.StudentService;
+import com.test_project.dto.StudentDto;
+import com.test_project.entities.Student;
+import com.test_project.services.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -32,9 +32,11 @@ public class StudentController {
     public ResponseEntity<List<Student>> findStudentByFirstName(@PathVariable(value = "studentName") String studentName) {
         List<Student> fetchedName = studentService.findStudentByFirstName(studentName);
         return new ResponseEntity<>(fetchedName, HttpStatus.OK);
+
+
     }
 
-    @GetMapping(value = "getStudent/{studId}")
+    @GetMapping(path = "getStudent/{studId}")
     public ResponseEntity<StudentDto> getStudentById(@PathVariable(value = "studId") Long studId) {
         if (studId == null) {
             return null;

@@ -1,6 +1,6 @@
-package com.test_project.Repository;
+package com.test_project.repository;
 
-import com.test_project.Entities.ResultCard;
+import com.test_project.entities.ResultCard;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

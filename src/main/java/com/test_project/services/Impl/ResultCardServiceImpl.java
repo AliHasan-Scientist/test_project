@@ -1,13 +1,13 @@
-package com.test_project.Services.Impl;
+package com.test_project.services.Impl;
 
-import com.test_project.Dto.ResultCardDto;
-import com.test_project.Entities.Result;
-import com.test_project.Entities.ResultCard;
-import com.test_project.Entities.Student;
-import com.test_project.Repository.ResultCardRepository;
-import com.test_project.Repository.ResultRepository;
-import com.test_project.Repository.StudentRepository;
-import com.test_project.Services.ResultCardService;
+import com.test_project.dto.ResultCardDto;
+import com.test_project.entities.Result;
+import com.test_project.entities.ResultCard;
+import com.test_project.entities.Student;
+import com.test_project.repository.ResultCardRepository;
+import com.test_project.repository.ResultRepository;
+import com.test_project.repository.StudentRepository;
+import com.test_project.services.ResultCardService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

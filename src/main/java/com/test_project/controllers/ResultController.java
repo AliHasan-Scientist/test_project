@@ -1,7 +1,7 @@
-package com.test_project.Controllers;
+package com.test_project.controllers;
 
-import com.test_project.Dto.ResultDto;
-import com.test_project.Services.ResultService;
+import com.test_project.dto.ResultDto;
+import com.test_project.services.ResultService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

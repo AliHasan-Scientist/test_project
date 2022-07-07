@@ -1,6 +1,6 @@
-package com.test_project.Services;
+package com.test_project.services;
 
-import com.test_project.Dto.ResultDto;
+import com.test_project.dto.ResultDto;
 
 import java.util.List;
 

@@ -1,6 +1,6 @@
-package com.test_project.Services;
+package com.test_project.services;
 
-import com.test_project.Entities.ResultCard;
+import com.test_project.entities.ResultCard;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

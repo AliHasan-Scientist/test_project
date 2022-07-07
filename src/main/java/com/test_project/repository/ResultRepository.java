@@ -1,6 +1,6 @@
-package com.test_project.Repository;
+package com.test_project.repository;
 
-import com.test_project.Entities.Result;
+import com.test_project.entities.Result;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

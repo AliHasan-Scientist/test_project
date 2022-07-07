@@ -1,10 +1,10 @@
-package com.test_project.Services.Impl;
+package com.test_project.services.Impl;
 
-import com.test_project.Dto.StudentDto;
-import com.test_project.Entities.Student;
-import com.test_project.Exceptions.ResourceNotFoundException;
-import com.test_project.Repository.StudentRepository;
-import com.test_project.Services.StudentService;
+import com.test_project.dto.StudentDto;
+import com.test_project.entities.Student;
+import com.test_project.exceptions.ResourceNotFoundException;
+import com.test_project.repository.StudentRepository;
+import com.test_project.services.StudentService;
 import lombok.NonNull;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
