@@ -25,11 +25,11 @@ public class ResultCard {
 
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name = "student_ID")
-    @JsonBackReference
+
     private Student student;
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name = "resultCard_ID")
-    @JsonBackReference
+
     private Result result;
 
     //def constructor

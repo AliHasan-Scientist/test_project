@@ -45,7 +45,7 @@ public class Result {
 
     // Result have many Result Card
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "result")
-    @JsonManagedReference
+
     private List<ResultCard> resultCard;
 
     //default constructor

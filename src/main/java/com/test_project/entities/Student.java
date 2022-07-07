@@ -38,7 +38,7 @@ public class Student {
     private List<Result> results = new ArrayList<>();
 
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "student")
-    @JsonManagedReference
+
     private List<ResultCard> resultCard;
 
     // default constructor
