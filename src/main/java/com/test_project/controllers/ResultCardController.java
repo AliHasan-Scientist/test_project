@@ -1,4 +1,5 @@
 package com.test_project.controllers;
+
 import com.test_project.entities.ResultCard;
 import com.test_project.services.ResultCardService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +18,7 @@ public class ResultCardController {
     @Autowired
     private ResultCardService resultCardService;
 
-    @PostMapping(value = "/student/{studentId}/result/{resultId}/resultCard",consumes = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(path = "/student/{studentId}/result/{resultId}/resultCard", consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<ResultCard> addResult(@PathVariable(value = "studentId") Long studentId, @PathVariable(value = "resultId") Long resultId, @RequestBody ResultCard resultCard) {
         ResultCard resultCard1 = resultCardService.createAResultCard(studentId, resultId, resultCard);
         return (new ResponseEntity<>(resultCard1, HttpStatus.CREATED));

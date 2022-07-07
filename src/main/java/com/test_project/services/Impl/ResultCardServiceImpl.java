@@ -33,7 +33,8 @@ public class ResultCardServiceImpl implements ResultCardService {
         resultCard.setStudent(student);
         resultCard.setResult(result);
         resultCard.setAnnouncedDate(new Date());
-
+        resultCard.setResult(result);
+        resultCard.setStudent(student);
         return resultCardRepository.save(resultCard);
     }
 
