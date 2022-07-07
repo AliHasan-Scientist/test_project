@@ -30,8 +30,8 @@ public class ResultCardServiceImpl implements ResultCardService {
         Student student = studentRepository.findById(studentId).orElseThrow(null);
         Result result = resultRepository.findById(resultId).orElseThrow(null);
         resultCard.setAnnouncedDate(new Date());
-        resultCard.setResult(result);
-        resultCard.setStudent(student);
+//        resultCard.setResult(result);
+//        resultCard.setStudent(student);
         return resultCardRepository.save(resultCard);
     }
 
