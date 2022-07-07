@@ -29,9 +29,6 @@ public class ResultCardServiceImpl implements ResultCardService {
     public ResultCard createAResultCard(Long studentId, Long resultId, ResultCard resultCard) {
         Student student = studentRepository.findById(studentId).orElseThrow(null);
         Result result = resultRepository.findById(resultId).orElseThrow(null);
-
-        resultCard.setStudent(student);
-        resultCard.setResult(result);
         resultCard.setAnnouncedDate(new Date());
         resultCard.setResult(result);
         resultCard.setStudent(student);
