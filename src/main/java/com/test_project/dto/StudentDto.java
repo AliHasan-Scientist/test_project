@@ -17,6 +17,6 @@ public class StudentDto implements Serializable {
     private String studentAddress;
     private String email;
     private String studentPassword;
-    private List<ResultDto> result=new ArrayList<>();
+    private List<ResultDto> results=new ArrayList<>();
 
 }

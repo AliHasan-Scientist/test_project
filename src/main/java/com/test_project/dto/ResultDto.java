@@ -5,7 +5,7 @@ import lombok.Data;
 import java.io.Serializable;
 
 @Data
-public class ResultDto implements Serializable {
+public class ResultDto  {
     private Long resultId;
     private Long studentRollNum;
     private String semester;
