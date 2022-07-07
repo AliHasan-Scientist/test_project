@@ -18,7 +18,7 @@ public class ResultCardController {
     @Autowired
     private ResultCardService resultCardService;
 
-    @PostMapping(path = "/student/{studentId}/result/{resultId}/resultCard", consumes = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping("/student/{studentId}/result/{resultId}/resultCard")
     public ResponseEntity<ResultCard> addResult(@PathVariable(value = "studentId") Long studentId, @PathVariable(value = "resultId") Long resultId, @RequestBody ResultCard resultCard) {
         ResultCard resultCard1 = resultCardService.createAResultCard(studentId, resultId, resultCard);
         return (new ResponseEntity<>(resultCard1, HttpStatus.CREATED));
